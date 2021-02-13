@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@../../stylesheets/newStile.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1_1">
+   <center>
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#createReservation" text="Prenota spettacolo" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/prenotaSpettacoli.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="summaryReservationC1_1_1" alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#summaryReservation" text="Riepilogo prenotazioni" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <graphic>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/eliminaPrenotazione.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="createOrderC1_1_1" alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#createOrder" text="Ordina cibo" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/prenotaCibo.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="deleteOrderC1_1_1" alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#deleteOrder" text="Elimina ordinazione" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/cancellaOrdinazione.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#deleteRegistration" text="Cancella registrazione" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <graphic>
+                  <ImageView fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/cancellaRegistrazione.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#logOut" text="Logout" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/logout.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="200.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <Label id="titolo" fx:id="title" prefHeight="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <left>
+      <Pane prefWidth="350.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefWidth="350.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

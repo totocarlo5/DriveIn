@@ -1,0 +1,38 @@
+.button {
+      -fx-background-radius: 30;
+      -fx-background-color: white;
+      -fx-font-size: 16px;
+      -fx-text-fill: #124cbf;
+      -fx-cursor: hand;
+}
+
+.root{
+      -fx-background-image: url(/main/view/icons/background.png);
+      -fx-background-position: center;
+      -fx-background-size: cover;
+}
+
+#titolo {
+      -fx-font-size: 60px;
+      -fx-text-fill: white;
+}
+
+.text-field {
+      -fx-font-size: 30px;
+}
+
+#legenda {
+      -fx-font-size: 20px;
+      -fx-text-fill: white;
+}
+
+.label {
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.errorLabel {
+    -fx-font-size: 30px;
+    -fx-text-fill: red;
+}

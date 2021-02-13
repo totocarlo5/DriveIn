@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.otherController.PosterScreenController">
+   <children>
+      <StackPane>
+         <children>
+            <ImageView fx:id="poster" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#12c7ff" height="40.0" opacity="0.6" stroke="BLACK" strokeLineCap="ROUND" strokeMiterLimit="0.0" strokeWidth="0.0" translateY="80.0" width="300.0" />
+            <Text fx:id="titleText" fill="WHITE" stroke="BLACK" strokeLineCap="ROUND" strokeType="OUTSIDE" textAlignment="CENTER" translateY="80.0">
+               <font>
+                  <Font name="Wide Latin" size="14.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="1.0" green="0.9953703880310059" blue="0.9953703880310059" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </effect>
+            </Text>
+            <Text fx:id="linkMovieProfileText" strokeType="OUTSIDE" strokeWidth="0.0" text="Vai alla scheda del film" underline="true" visible="false">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <VBox alignment="CENTER_LEFT">
+         <children>
+            <Text fx:id="genreText" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="showDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="timeDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Ora spettacolo: ">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</VBox>

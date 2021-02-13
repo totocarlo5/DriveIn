@@ -1,0 +1,32 @@
+.root{
+      -fx-background-image: url(/main/view/icons/background.png);
+      -fx-background-position: center;
+      -fx-background-size: stretch;
+}
+
+.label {
+      -fx-font-size: 30px;
+      -fx-text-fill: white;
+	-fx-cursor: hand;
+}
+/*
+#film {
+      -fx-size: 80;
+}
+
+#data {
+      -fx-size: 80;
+}
+
+#ora {
+      -fx-size: 80;
+}
+
+#prezzo {
+
+}
+*/
+
+.table-view {
+       -fx-size: 80;
+}

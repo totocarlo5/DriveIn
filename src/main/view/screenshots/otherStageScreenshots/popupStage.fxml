@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.stage.Stage?>
+<Stage fx:id="popupStage" onCloseRequest="#ok" resizable="false" title="Finestra di popup" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <scene>
+      <Scene>
+         <root>
+            <BorderPane stylesheets="@../../stylesheets/C1_2_1-clientOkSignIn.css">
+               <bottom>
+                  <GridPane prefHeight="300.0" BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#ok" text="Ok">
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icons/ok.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                                       <input>
+                                          <Reflection />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </bottom>
+               <top>
+                  <Label fx:id="title" focusTraversable="false" prefHeight="200.0" text="" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </top>
+            </BorderPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

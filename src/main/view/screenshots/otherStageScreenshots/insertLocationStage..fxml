@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Scene?>
+<?import javafx.stage.Stage?>
+<Stage xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <scene>
+      <Scene>
+         <root>
+            <BorderPane fx:id="root">
+               <right>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </right>
+               <left>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </left>
+               <top>
+                  <Label text="Specifica la tua postazione" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <MenuButton fx:id="locationList" mnemonicParsing="false" text="Postazione" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <Avatar radius="30.0">
+                           <image>
+                              <Image url="@../../icons/scegliPostazione.png" />
+                           </image>
+                        </Avatar>
+                     </graphic>
+                  </MenuButton>
+               </center>
+            </BorderPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

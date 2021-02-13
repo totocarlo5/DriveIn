@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@../../stylesheets/C1_1-clientLoginScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1">
+   <center>
+      <VBox>
+         <children>
+            <TextField fx:id="userName" focusTraversable="false" promptText="Username" />
+            <Label id="inserisciUsername" fx:id="usernameError" focusTraversable="false" />
+            <PasswordField fx:id="password" focusTraversable="false" promptText="Password" />
+            <Label id="inserisciPassword" fx:id="generalError" focusTraversable="false" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label id="titolo" prefHeight="300.0" text="Inserisci le tue credenziali e accedi" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="20.0" top="60.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <left>
+      <Pane prefWidth="300.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefWidth="300.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#login" text="Conferma">
+               <graphic>
+                  <ImageView fitHeight="120.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/ok.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons/indietro.png" />
+                     </image>
+                      <effect>
+                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                              <input>
+                                  <Reflection />
+                              </input>
+                          </DropShadow>
+                      </effect>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

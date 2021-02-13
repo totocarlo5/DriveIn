@@ -1,0 +1,24 @@
+.root{
+      -fx-background-image: url(/main/view/icons/background.png);
+      -fx-background-position: center;
+      -fx-background-size: stretch;  
+}
+
+.label {
+	-fx-font-size: 30px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+#gridPane {
+    -fx-background-color: black;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-alignment: center;
+}
+
+.scroll-pane {
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-pannable:true;
+}

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane stylesheets="@../../stylesheets/C1_3-showsList.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_3">
+   <top>
+      <Label focusTraversable="false" graphicTextGap="0.0" prefHeight="80.0" text="Spettacoli in programmazione" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Pane prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Pane prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" prefHeight="200.0" text="Indietro" BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/indietro.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                     <input>
+                        <Reflection />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </graphic>
+      </Label>
+   </bottom>
+   <center>
+      <ScrollPane>
+         <content>
+            <GridPane id="gridPane" fx:id="gridPane" alignment="CENTER" cache="true">
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <children>
+                  <VBox cache="true">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/greenland.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text stroke="WHITE" strokeType="OUTSIDE" text="Greenland">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data di uscita: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="1">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/palm_springs.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text stroke="WHITE" strokeType="OUTSIDE" text="Palm Springs">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" stroke="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="2">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/david_copperfield.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" text="David Copperfield">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="3">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/lockdown_allitaliana.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lock down all'italiana">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.rowIndex="1">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/greenland.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" text="Greenland">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/greenland.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text stroke="WHITE" strokeType="OUTSIDE" text="Greenland">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/palm_springs.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Palm Springs">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/david_copperfield.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="David Copperfield">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/david_copperfield.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text stroke="WHITE" strokeType="OUTSIDE" text="David Copperfield">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/lockdown_allitaliana.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lock down all'italiana">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" GridPane.rowIndex="2">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/lockdown_allitaliana.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lock down all'italiana">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox cache="true" layoutX="10.0" layoutY="290.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <StackPane cache="true">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../icons/greenland.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#21ccff" height="40.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" translateY="80.0" width="300.0" />
+                              <Label contentDisplay="GRAPHIC_ONLY" text="Label" translateY="80.0">
+                                 <graphic>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Greenland">
+                                       <font>
+                                          <Font name="Wide Latin" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genere: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data spettacolo: ">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

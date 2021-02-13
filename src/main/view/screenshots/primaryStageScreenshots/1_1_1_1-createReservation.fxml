@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@../../stylesheets/C1_1_1_1-createReservation.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1_1_1">
+   <top>
+      <Label focusTraversable="false" prefHeight="200.0" text="Seleziona il film che vorresti vedere" textAlignment="JUSTIFY" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <TableView fx:id="table" editable="true" focusTraversable="false" prefHeight="406.0" prefWidth="1553.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="movieColumn" prefWidth="300.0" resizable="false" text="Film" />
+          <TableColumn fx:id="dateColumn" resizable="false" text="Data" />
+            <TableColumn fx:id="timeColumn" resizable="false" text="Ora" />
+            <TableColumn fx:id="locationColumn" prefWidth="400.0" resizable="false" text="Postazione">
+               <columns>
+                  <TableColumn fx:id="selectLocationColumn" prefWidth="200.0" resizable="false" text="Selezione" />
+                  <TableColumn fx:id="numberLocationColumn" prefWidth="50.0" resizable="false" text="N°" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="priceColumn" prefWidth="100.0" resizable="false" text="Prezzo" />
+            <TableColumn fx:id="reserveColumn" prefWidth="200.0" resizable="false" text="Prenota" />
+        </columns>
+         <effect>
+            <InnerShadow color="#e24040" />
+         </effect>
+      </TableView>
+   </center>
+   <left>
+      <Pane prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" prefHeight="300.0" text="Indietro" BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="110.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/indietro.png" />
+               </image>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                            <Reflection />
+                        </input>
+                    </DropShadow>
+                </effect>
+            </ImageView>
+         </graphic>
+      </Label>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<BorderPane stylesheets="@../../stylesheets/C1_1_1_1-createReservation.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1_1_2">
+    <top>
+        <Label focusTraversable="false" prefHeight="200.0" text="Prenotazioni effettuate" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="30.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <right>
+        <Pane prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </right>
+   <left>
+          <Pane prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+          <TableView fx:id="table" editable="true" focusTraversable="false" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn prefWidth="200.0" text="titolo" />
+                  <TableColumn prefWidth="150.0" text="data" />
+                  <TableColumn prefWidth="150.0" text="ora" />
+                  <TableColumn prefWidth="360.0" text="postazione" />
+                  <TableColumn prefWidth="300.0" text="cancella" />
+              </columns>
+         <effect>
+            <InnerShadow color="#e24040" />
+         </effect>
+          </TableView>
+   </center>
+   <bottom>
+      <Label contentDisplay="TOP" graphicTextGap="50.0" prefHeight="300.0" text="Indietro" BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/indietro.png" />
+               </image>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                            <Reflection />
+                        </input>
+                    </DropShadow>
+                </effect>
+            </ImageView>
+         </graphic>
+      </Label>
+   </bottom>
+</BorderPane>
