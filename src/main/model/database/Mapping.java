@@ -8,13 +8,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mapping {
+public interface Mapping {
 
-    public enum DBName {
+    enum DBName {
         MY_SQL
     }
 
-    public static User fromUserDTOToUser(UserDTO userDTO, DBName dbName) {
+    static User fromUserDTOToUser(UserDTO userDTO, DBName dbName) {
         User user = null;
         if (dbName == DBName.MY_SQL)
             user = new MysqlUserProxy (
@@ -29,7 +29,7 @@ public class Mapping {
         return user;
     }
 
-    public static List<User> fromUserDTOToUser(List<UserDTO> usersDTO, DBName dbName) {
+    static List<User> fromUserDTOToUser(List<UserDTO> usersDTO, DBName dbName) {
         List<User> users = new ArrayList<>();
         for (UserDTO userDTO: usersDTO) {
             User user = fromUserDTOToUser(userDTO, dbName);
@@ -38,14 +38,14 @@ public class Mapping {
         return users;
     }
 
-    public static UserDTO fromUserToUserDTO(User user) {
+    static UserDTO fromUserToUserDTO(User user) {
        return new UserDTO(
                 user.getUsername(), user.getPassword(), user.getFirstName(), user.getLastName(),
                 user.getFiscalCode(), user.getBirthDate(), user.getPhone()
         );
     }
 
-    public static List<UserDTO> fromUserToUserDTO(List<User> users) {
+    static List<UserDTO> fromUserToUserDTO(List<User> users) {
         List<UserDTO> usersDTO = new ArrayList<>();
         for (User user: users) {
             UserDTO userDTO = fromUserToUserDTO(user);
@@ -54,7 +54,7 @@ public class Mapping {
         return usersDTO;
     }
 
-    public static Show fromShowDTOToShow(ShowDTO showDTO, DBName dbName) {
+    static Show fromShowDTOToShow(ShowDTO showDTO, DBName dbName) {
         Show show = null;
         Movie movie = fromMovieDTOToMovie(showDTO.getMovie(), DBName.MY_SQL);
         if (dbName == DBName.MY_SQL)
@@ -67,7 +67,7 @@ public class Mapping {
         return show;
     }
 
-    public static List<Show> fromShowDTOToShow(List<ShowDTO> showsDTO, DBName dbName) {
+    static List<Show> fromShowDTOToShow(List<ShowDTO> showsDTO, DBName dbName) {
         List<Show> shows = new ArrayList<>();
         for (ShowDTO showDTO: showsDTO) {
             Show show = fromShowDTOToShow(showDTO, dbName);
@@ -76,7 +76,7 @@ public class Mapping {
         return shows;
     }
 
-    public static ShowDTO fromShowToShowDTO(Show show) throws SQLException {
+    static ShowDTO fromShowToShowDTO(Show show) throws SQLException {
         MovieDTO movieDTO = fromMovieToMovieDTO(show.getMovie());
         return new ShowDTO(
                 movieDTO,
@@ -86,7 +86,7 @@ public class Mapping {
         );
     }
 
-    public static List<ShowDTO> fromShowToShowDTO(List<Show> shows) throws SQLException {
+    static List<ShowDTO> fromShowToShowDTO(List<Show> shows) throws SQLException {
 
         List<ShowDTO> showsDTO = new ArrayList<>();
         for (Show show: shows) {
@@ -96,7 +96,7 @@ public class Mapping {
         return showsDTO;
     }
 
-    public static Product fromProductDTOToProduct(ProductDTO productDTO, DBName dbName) {
+    static Product fromProductDTOToProduct(ProductDTO productDTO, DBName dbName) {
         Product product = null;
         if (dbName == DBName.MY_SQL)
             product = new MysqlProductProxy(
@@ -107,7 +107,7 @@ public class Mapping {
         return product;
     }
 
-    public static List<Product> fromProductDTOToProduct(List<ProductDTO> productsDTO, DBName dbName) {
+    static List<Product> fromProductDTOToProduct(List<ProductDTO> productsDTO, DBName dbName) {
         List<Product> products = new ArrayList<>();
         for (ProductDTO productDTO: productsDTO) {
             Product product = fromProductDTOToProduct(productDTO, dbName);
@@ -116,7 +116,7 @@ public class Mapping {
         return products;
     }
 
-    public static ProductDTO fromProductToProductDTO(Product product) {
+    static ProductDTO fromProductToProductDTO(Product product) {
         return new ProductDTO(
                 product.getProductName(),
                 product.getPrice(),
@@ -124,7 +124,7 @@ public class Mapping {
         );
     }
 
-    public static List<ProductDTO> fromProductToProductDTO(List<Product> products) {
+    static List<ProductDTO> fromProductToProductDTO(List<Product> products) {
         List<ProductDTO> productsDTO = new ArrayList<>();
         for (Product product: products) {
             ProductDTO productDTO = fromProductToProductDTO(product);
@@ -133,7 +133,7 @@ public class Mapping {
         return productsDTO;
     }
 
-    public static Reservation fromReservationDTOToReservation(ReservationDTO reservationDTO, DBName dbName) {
+    static Reservation fromReservationDTOToReservation(ReservationDTO reservationDTO, DBName dbName) {
         Reservation reservation = null;
         User user = fromUserDTOToUser(reservationDTO.getUser(), dbName);
         Show show = fromShowDTOToShow(reservationDTO.getShow(), dbName);
@@ -147,7 +147,7 @@ public class Mapping {
         return reservation;
     }
 
-    public static List<Reservation> fromReservationDTOToReservation(List<ReservationDTO> reservationsDTO, DBName dbName) {
+    static List<Reservation> fromReservationDTOToReservation(List<ReservationDTO> reservationsDTO, DBName dbName) {
         List<Reservation> reservations = new ArrayList<>();
         for (ReservationDTO reservationDTO: reservationsDTO) {
             Reservation reservation = fromReservationDTOToReservation(reservationDTO, dbName);
@@ -156,7 +156,7 @@ public class Mapping {
         return reservations;
     }
 
-    public static ReservationDTO fromReservationToReservationDTO(Reservation reservation) throws SQLException {
+    static ReservationDTO fromReservationToReservationDTO(Reservation reservation) throws SQLException {
         UserDTO userDTO = fromUserToUserDTO(reservation.getUser());
         ShowDTO showDTO = fromShowToShowDTO(reservation.getShow());
         return new ReservationDTO(
@@ -167,7 +167,7 @@ public class Mapping {
         );
     }
 
-    public static List<ReservationDTO> fromReservationToReservationDTO(List<Reservation> reservations) throws SQLException {
+    static List<ReservationDTO> fromReservationToReservationDTO(List<Reservation> reservations) throws SQLException {
         List<ReservationDTO> reservationsDTO = new ArrayList<>();
         for (Reservation reservation: reservations) {
             ReservationDTO reservationDTO = fromReservationToReservationDTO(reservation);
@@ -176,7 +176,7 @@ public class Mapping {
         return reservationsDTO;
     }
 
-    public static Order fromOrderDTOToOrder(OrderDTO orderDTO, DBName dbName) {
+    static Order fromOrderDTOToOrder(OrderDTO orderDTO, DBName dbName) {
        Order order = null;
         Reservation reservation = fromReservationDTOToReservation(orderDTO.getReservation(), dbName);
         if (dbName == DBName.MY_SQL)
@@ -189,7 +189,7 @@ public class Mapping {
         return order;
     }
 
-    public static List<Order> fromOrderDTOToOrder(List<OrderDTO> ordersDTO, DBName dbName) {
+    static List<Order> fromOrderDTOToOrder(List<OrderDTO> ordersDTO, DBName dbName) {
         List<Order> orders = new ArrayList<>();
         for (OrderDTO orderDTO: ordersDTO) {
             Order order = fromOrderDTOToOrder(orderDTO, dbName);
@@ -198,7 +198,7 @@ public class Mapping {
         return orders;
     }
 
-    public static OrderDTO fromOrderToOrderDTO(Order order) throws SQLException {
+    static OrderDTO fromOrderToOrderDTO(Order order) throws SQLException {
         ReservationDTO reservationDTO = fromReservationToReservationDTO(order.getReservation());
         return new OrderDTO(
                 order.getIdOrder(),
@@ -208,7 +208,7 @@ public class Mapping {
         );
     }
 
-    public static List<OrderDTO> fromOrderToOrderDTO(List<Order> orders) throws SQLException {
+    static List<OrderDTO> fromOrderToOrderDTO(List<Order> orders) throws SQLException {
         List<OrderDTO> ordersDTO = new ArrayList<>();
         for (Order order: orders) {
             OrderDTO orderDTO = fromOrderToOrderDTO(order);
@@ -217,7 +217,7 @@ public class Mapping {
         return ordersDTO;
     }
 
-    public static ProductOrderMapping fromProductOrderMappingDTOToProductOrderMapping(ProductOrderMappingDTO productOrderMappingDTO, DBName dbName) {
+    static ProductOrderMapping fromProductOrderMappingDTOToProductOrderMapping(ProductOrderMappingDTO productOrderMappingDTO, DBName dbName) {
         Order order = fromOrderDTOToOrder(productOrderMappingDTO.getOrder(), dbName);
         Product product = fromProductDTOToProduct(productOrderMappingDTO.getProduct(), dbName);
         return  new MysqlProductOrderMappingProxy(
@@ -227,7 +227,7 @@ public class Mapping {
         );
     }
 
-    public static List<ProductOrderMapping> fromProductOrderMappingDTOToProductOrderMapping(List<ProductOrderMappingDTO> productOrderMappingsDTO, DBName dbName) {
+    static List<ProductOrderMapping> fromProductOrderMappingDTOToProductOrderMapping(List<ProductOrderMappingDTO> productOrderMappingsDTO, DBName dbName) {
         List<ProductOrderMapping> productOrderMappings = new ArrayList<>();
         for (ProductOrderMappingDTO productOrderMappingDTO: productOrderMappingsDTO) {
             ProductOrderMapping productOrderMapping = fromProductOrderMappingDTOToProductOrderMapping(productOrderMappingDTO, dbName);
@@ -236,7 +236,7 @@ public class Mapping {
         return productOrderMappings;
     }
 
-    public static ProductOrderMappingDTO fromProductOrderMappingToProductOrderMappingDTO(ProductOrderMapping productOrderMapping) throws SQLException {
+    static ProductOrderMappingDTO fromProductOrderMappingToProductOrderMappingDTO(ProductOrderMapping productOrderMapping) throws SQLException {
         OrderDTO orderDTO = fromOrderToOrderDTO(productOrderMapping.getOrder());
         ProductDTO productDTO = fromProductToProductDTO(productOrderMapping.getProduct());
         return new ProductOrderMappingDTO(
@@ -246,7 +246,7 @@ public class Mapping {
         );
     }
 
-    public static List<ProductOrderMappingDTO> fromProductOrderMappingToProductOrderMappingDTO(List<ProductOrderMapping> productOrderMappings) throws SQLException {
+    static List<ProductOrderMappingDTO> fromProductOrderMappingToProductOrderMappingDTO(List<ProductOrderMapping> productOrderMappings) throws SQLException {
         List<ProductOrderMappingDTO> productOrderMappingsDTO = new ArrayList<>();
         for (ProductOrderMapping productOrderMapping: productOrderMappings) {
             ProductOrderMappingDTO productOrderMappingDTO = fromProductOrderMappingToProductOrderMappingDTO(productOrderMapping);
@@ -255,7 +255,7 @@ public class Mapping {
         return productOrderMappingsDTO;
     }
 
-    public static Movie fromMovieDTOToMovie(MovieDTO movieDTO, DBName dbName) {
+    static Movie fromMovieDTOToMovie(MovieDTO movieDTO, DBName dbName) {
         Movie movie = null;
         if (dbName == DBName.MY_SQL)
             movie = new MysqlMovieProxy(
@@ -279,7 +279,7 @@ public class Mapping {
         return movie;
     }
 
-    public static List<Movie> fromMovieDTOToMovie(List<MovieDTO> moviesDTO, DBName dbName) {
+    static List<Movie> fromMovieDTOToMovie(List<MovieDTO> moviesDTO, DBName dbName) {
         List<Movie> movies = new ArrayList<>();
         for (MovieDTO movieDTO: moviesDTO) {
             Movie movie = fromMovieDTOToMovie(movieDTO, dbName);
@@ -288,7 +288,7 @@ public class Mapping {
         return movies;
     }
 
-    public static MovieDTO fromMovieToMovieDTO(Movie movie) {
+    static MovieDTO fromMovieToMovieDTO(Movie movie) {
         return new MovieDTO(
                 movie.getIdMovie(),
                 movie.getTitle(),
@@ -309,7 +309,7 @@ public class Mapping {
         );
     }
 
-    public static List<MovieDTO> fromMovieToMovieDTO(List<Movie> movies) {
+    static List<MovieDTO> fromMovieToMovieDTO(List<Movie> movies) {
         List<MovieDTO> moviesDTO = null;
         for (Movie movie: movies) {
             MovieDTO movieDTO = fromMovieToMovieDTO(movie);

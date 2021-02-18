@@ -8,14 +8,27 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
+
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
 <BorderPane stylesheets="@../../stylesheets/C1_1-clientLoginScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1">
    <center>
       <VBox>
          <children>
-            <TextField fx:id="userName" focusTraversable="false" promptText="Username" />
+            <CustomTextField fx:id="userName" focusTraversable="false" promptText="Username">
+                <left>
+                    <Glyph styleClass="glyph" fontFamily="FontAwesome" icon="USER" />
+                </left>
+            </CustomTextField>
             <Label id="inserisciUsername" fx:id="usernameError" focusTraversable="false" />
-            <PasswordField fx:id="password" focusTraversable="false" promptText="Password" />
-            <Label id="inserisciPassword" fx:id="generalError" focusTraversable="false" />
+            <CustomPasswordField fx:id="password" focusTraversable="false" promptText="Password">
+                <left>
+                    <Glyph styleClass="glyph" fontFamily="FontAwesome" icon="LOCK" />
+                </left>
+            </CustomPasswordField>
+            <Label id="inserisciPassword" fx:id="passwordError" focusTraversable="false" />
          </children>
       </VBox>
    </center>
@@ -36,10 +49,10 @@
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints valignment="TOP" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#login" text="Conferma">

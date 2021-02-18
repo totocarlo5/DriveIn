@@ -45,14 +45,15 @@ public class Model {
     }
 
     public void logInUser(String username, String password) throws UserNotFoundException, PasswordNotMatchException, SQLException {
-        UserDTO userDTO = (UserDTO) userDAO.load(username);
-        if (userDTO != null)
-            if (userDTO.getPassword().equals(password))
-                userLogged = Mapping.fromUserDTOToUser(userDTO, Mapping.DBName.MY_SQL);
-            else
-                throw new PasswordNotMatchException("La password inserita non è corretta");
-        else
+        List<UserDTO> usersDTO = userDAO.load(username);
+
+        if (usersDTO.isEmpty())
             throw new UserNotFoundException("L'username inserito non è presente");
+
+        if (!usersDTO.get(0).getPassword().equals(password))
+            throw new PasswordNotMatchException("La password inserita non è corretta");
+
+        userLogged = Mapping.fromUserDTOToUser(usersDTO, Mapping.DBName.MY_SQL).get(0);
     }
 
     public void logOutUser() {

@@ -23,3 +23,9 @@
     -fx-text-fill: white;
     -fx-cursor: hand;
 }
+
+.glyph {
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 50px;
+    -fx-text-fill: black;
+}
