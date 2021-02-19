@@ -12,72 +12,62 @@
 <BorderPane stylesheets="@../../stylesheets/1-mainScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1">
    <center>
       <HBox styleClass="h-box" BorderPane.alignment="CENTER">
-         <children>
-            <Label onMouseClicked="#login" text="Accedi">
-               <graphic>
-                  <ImageView fitWidth="100.0" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/login.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label onMouseClicked="#signIn" text="Registrati">
-               <graphic>
-                  <ImageView fitWidth="135.0" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/registrati.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label onMouseClicked="#showsList" text="Spettacoli">
-               <graphic>
-                  <ImageView fitWidth="120.0" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/spettacoli.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label onMouseClicked="#exit" text="Esci">
-               <graphic>
-                  <ImageView fitWidth="100" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/chiudi.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-         </children>
+         <Label onMouseClicked="#login" text="Accedi">
+            <graphic>
+               <ImageView fitWidth="100.0" preserveRatio="true">
+                  <Image url="@../../icons/login.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#signIn" text="Registrati">
+            <graphic>
+               <ImageView fitWidth="135.0" preserveRatio="true">
+                  <Image url="@../../icons/registrati.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#showsList" text="Spettacoli">
+            <graphic>
+               <ImageView fitWidth="120.0" preserveRatio="true">
+                  <Image url="@../../icons/spettacoli.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#exit" text="Esci">
+            <graphic>
+               <ImageView fitWidth="100" preserveRatio="true">
+                  <Image url="@../../icons/chiudi.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
       </HBox>
    </center>
    <top>

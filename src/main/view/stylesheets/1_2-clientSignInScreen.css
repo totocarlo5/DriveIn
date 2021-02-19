@@ -1,34 +1,12 @@
 .root {
-      -fx-background-color:black;
+    -fx-background-color:black;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-pannable: true;
 }
 
-.border-pane{
-      -fx-background-image: url(/main/view/icons/background.png);
-      -fx-background-position: center;
-      -fx-background-size: cover;
-}
-
-#titolo {
-      -fx-font-size: 60px;
-      -fx-text-fill: white;
-}
-
-.text-field {
-      -fx-font-size: 30px;
-}
-
-#legenda {
-      -fx-font-size: 20px;
-      -fx-text-fill: white;
-}
-
-.label {
-    -fx-font-size: 30px;
-    -fx-text-fill: white;
-    -fx-cursor: hand;
-}
-
-.errorLabel {
-    -fx-font-size: 30px;
-    -fx-text-fill: red;
+.border-pane {
+    -fx-background-image: url(/main/view/icons/background.png);
+    -fx-background-position: center;
+    -fx-background-size: cover;
 }

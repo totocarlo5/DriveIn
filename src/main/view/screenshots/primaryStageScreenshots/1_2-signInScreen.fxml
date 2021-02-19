@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
@@ -8,48 +7,27 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@../../stylesheets/1_2-clientSignInScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_2">
-   <content>
-      <BorderPane styleClass="border-pane">
-         <center>
-            <VBox fx:id="vBox" alignment="CENTER" fillWidth="false" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets bottom="100.0" />
-               </BorderPane.margin>
+<ScrollPane stylesheets="@../../stylesheets/1_2-clientSignInScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_2">
+    <BorderPane styleClass="border-pane">
+        <center>
+            <VBox fx:id="vBox" BorderPane.alignment="CENTER">
             </VBox>
-         </center>
-         <top>
-            <VBox alignment="TOP_CENTER" prefHeight="150.0" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets left="20.0" top="60.0" />
-               </BorderPane.margin>
-               <children>
-                  <Label id="titolo" fx:id="titolo" focusTraversable="false" text="Inserisci i dati richiesti" />
-                  <Label id="legenda" focusTraversable="false" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
-               </children>
+        </center>
+        <top>
+            <VBox BorderPane.alignment="CENTER">
+                <Label id="titolo" text="Inserisci i dati richiesti" />
+                <Label id="legenda" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
             </VBox>
-         </top>
-         <bottom>
+        </top>
+        <bottom>
             <GridPane BorderPane.alignment="CENTER">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" />
-                  <ColumnConstraints hgrow="SOMETIMES" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                     <graphic>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../icons/indietro.png" />
-                           </image>
+                <Label onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                    <graphic>
+                        <ImageView fitWidth="100.0" preserveRatio="true">
+                            <Image url="@../../icons/indietro.png" />
                             <effect>
                                 <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
                                     <input>
@@ -58,14 +36,12 @@
                                 </DropShadow>
                             </effect>
                         </ImageView>
-                     </graphic>
-                  </Label>
-                  <Label fx:id="signInC1_2" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#signIn" text="Conferma" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                     <graphic>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../icons/ok.png" />
-                           </image>
+                    </graphic>
+                </Label>
+                <Label onMouseClicked="#signIn" text="Conferma" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                    <graphic>
+                        <ImageView fitWidth="100.0" preserveRatio="true">
+                            <Image url="@../../icons/ok.png" />
                             <effect>
                                 <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
                                     <input>
@@ -74,11 +50,9 @@
                                 </DropShadow>
                             </effect>
                         </ImageView>
-                     </graphic>
-                  </Label>
-               </children>
+                    </graphic>
+                </Label>
             </GridPane>
-         </bottom>
-      </BorderPane>
-   </content>
+        </bottom>
+    </BorderPane>
 </ScrollPane>
