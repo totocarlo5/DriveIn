@@ -28,8 +28,10 @@ public class ScreenController1_1 extends PrimaryStageController {
 
     private CustomPasswordField password;
 
+    @FXML
     private Label usernameError;
 
+    @FXML
     private Label passwordError;
 
     @FXML
@@ -73,6 +75,7 @@ public class ScreenController1_1 extends PrimaryStageController {
         Glyph userGlyph = GlyphFontRegistry.font("FontAwesome").create("USER");
         userGlyph.getStyleClass().add("glyph");
         userName.setLeft(userGlyph);
+        vBox.getChildren().add(0, userName);
 
         password = (CustomPasswordField) TextFields.createClearablePasswordField();
         password.setFocusTraversable(false);
@@ -80,13 +83,6 @@ public class ScreenController1_1 extends PrimaryStageController {
         Glyph passwordGlyph = GlyphFontRegistry.font("FontAwesome").create("LOCK");
         passwordGlyph.getStyleClass().add("glyph");
         password.setLeft(passwordGlyph);
-
-        usernameError = new Label();
-        usernameError.getStyleClass().add("exceptionLabel");
-
-        passwordError = new Label();
-        passwordError.getStyleClass().add("exceptionLabel");
-
-        vBox.getChildren().addAll(userName, usernameError, password, passwordError);
+        vBox.getChildren().add(2, password);
     }
 }

@@ -18,7 +18,11 @@
       <BorderPane styleClass="border-pane">
          <center>
             <VBox fx:id="vBox" alignment="CENTER" fillWidth="false" BorderPane.alignment="CENTER">
-      </VBox>
+               <children>
+                  <Label fx:id="usernameError" prefWidth="800" styleClass="exceptionLabel"  />
+                  <Label fx:id="passwordError" prefWidth="800" styleClass="exceptionLabel" />
+               </children>
+            </VBox>
          </center>
          <top>
             <Label id="titolo" prefHeight="150.0" text="Inserisci le tue credenziali e accedi" BorderPane.alignment="CENTER">
