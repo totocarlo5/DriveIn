@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.layout.HBox?>
 <ScrollPane stylesheets="@../../stylesheets/1_1-clientLoginScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_1">
     <BorderPane styleClass="border-pane">
         <center>
@@ -20,13 +21,11 @@
             </VBox>
         </center>
         <bottom>
-            <GridPane styleClass="grid-pane" BorderPane.alignment="CENTER">
+            <HBox styleClass="h-box" BorderPane.alignment="CENTER">
                 <Label onMouseClicked="#login" styleClass="link" text="Conferma">
                     <graphic>
                         <ImageView fitWidth="100.0" preserveRatio="true">
-                            <image>
-                                <Image url="@../../icons/ok.png" />
-                            </image>
+                            <Image url="@../../icons/ok.png" />
                             <effect>
                                 <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
                                     <input>
@@ -36,13 +35,11 @@
                             </effect>
                         </ImageView>
                      </graphic>
-                  </Label>
-                  <Label onMouseClicked="#back" styleClass="link" text="Indietro" GridPane.columnIndex="1">
-                     <graphic>
+                </Label>
+                <Label onMouseClicked="#back" styleClass="link" text="Indietro">
+                    <graphic>
                         <ImageView fitWidth="100.0" preserveRatio="true">
-                           <image>
-                              <Image url="@../../icons/indietro.png" />
-                           </image>
+                            <Image url="@../../icons/indietro.png" />
                             <effect>
                                 <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
                                     <input>
@@ -51,9 +48,9 @@
                                 </DropShadow>
                             </effect>
                         </ImageView>
-                     </graphic>
-                  </Label>
-            </GridPane>
+                    </graphic>
+                </Label>
+            </HBox>
         </bottom>
         <top>
             <Text id="titolo" text="Inserire le credenziali per accedere" BorderPane.alignment="CENTER" />

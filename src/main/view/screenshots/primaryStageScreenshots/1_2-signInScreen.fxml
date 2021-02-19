@@ -10,35 +10,23 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
 <ScrollPane stylesheets="@../../stylesheets/1_2-clientSignInScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_2">
     <BorderPane styleClass="border-pane">
-        <center>
-            <VBox fx:id="vBox" BorderPane.alignment="CENTER">
-            </VBox>
-        </center>
         <top>
-            <VBox BorderPane.alignment="CENTER">
-                <Label id="titolo" text="Inserisci i dati richiesti" />
-                <Label id="legenda" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
+            <VBox styleClass="v-box" BorderPane.alignment="CENTER">
+                <Text id="titolo" text="Inserisci i dati richiesti" />
+                <Text id="sottotitolo" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
             </VBox>
         </top>
+        <center>
+            <VBox fx:id="vBox" styleClass="v-box" BorderPane.alignment="CENTER">
+            </VBox>
+        </center>
         <bottom>
-            <GridPane BorderPane.alignment="CENTER">
-                <Label onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-                    <graphic>
-                        <ImageView fitWidth="100.0" preserveRatio="true">
-                            <Image url="@../../icons/indietro.png" />
-                            <effect>
-                                <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                                    <input>
-                                        <Reflection />
-                                    </input>
-                                </DropShadow>
-                            </effect>
-                        </ImageView>
-                    </graphic>
-                </Label>
-                <Label onMouseClicked="#signIn" text="Conferma" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+            <HBox styleClass="h-box" BorderPane.alignment="CENTER">
+                <Label styleClass="link" onMouseClicked="#signIn" text="Conferma">
                     <graphic>
                         <ImageView fitWidth="100.0" preserveRatio="true">
                             <Image url="@../../icons/ok.png" />
@@ -52,7 +40,21 @@
                         </ImageView>
                     </graphic>
                 </Label>
-            </GridPane>
+                <Label styleClass="link" onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1">
+                    <graphic>
+                        <ImageView fitWidth="100.0" preserveRatio="true">
+                            <Image url="@../../icons/indietro.png" />
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                                    <input>
+                                        <Reflection />
+                                    </input>
+                                </DropShadow>
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </Label>
+            </HBox>
         </bottom>
     </BorderPane>
 </ScrollPane>

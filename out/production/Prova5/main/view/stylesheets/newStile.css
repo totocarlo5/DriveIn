@@ -6,17 +6,9 @@
       -fx-cursor: hand;
 }
 
-.root{
-      -fx-background-image: url(/main/view/icons/background.png);
-      -fx-background-position: center;
-      -fx-background-size: cover;
-}
 
-.label {
-      -fx-font-size: 30px;
-      -fx-text-fill: white;
-      -fx-cursor: hand;
-}
+
+
 
 #titolo {
 	-fx-font-size: 60px;

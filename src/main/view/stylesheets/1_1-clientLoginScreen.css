@@ -16,9 +16,9 @@
       -fx-fill-width: false;
 }
 
-.grid-pane {
-      -fx-alignment: center;
-      -fx-hgap: 600;
+.h-box {
+    -fx-alignment: center;
+    -fx-spacing: 600;
 }
 
 #titolo {
@@ -48,11 +48,8 @@
     -fx-graphic-text-gap: 50;
 }
 
-.link {
-    -fx-cursor: hand;
-}
-
 .link: hover {
+    -fx-cursor: hand;
     -fx-background-color: grey;
     -fx-background-radius: 20;
 }

@@ -1,100 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<BorderPane stylesheets="@../../stylesheets/newStile.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1">
+<BorderPane stylesheets="@../../stylesheets/1-mainScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1">
    <center>
-      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="500.0" top="100.0" />
-         </BorderPane.margin>
-         <columnConstraints>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints valignment="BOTTOM" vgrow="SOMETIMES" />
-            <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#showsList" text="Spettacoli" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="101.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/spettacoli.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#exit" text="Esci" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="100.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/chiudi.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#signIn" text="Registrati" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="103.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/registrati.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#login" text="Accedi" GridPane.rowIndex="1">
-               <graphic>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/login.png" />
-                     </image>
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                           <input>
-                              <Reflection />
-                           </input>
-                        </DropShadow>
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-         </children>
-      </GridPane>
+      <HBox styleClass="h-box" BorderPane.alignment="CENTER">
+         <Label onMouseClicked="#login" text="Accedi">
+            <graphic>
+               <ImageView fitWidth="100.0" preserveRatio="true">
+                  <Image url="@../../icons/login.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#signIn" text="Registrati">
+            <graphic>
+               <ImageView fitWidth="135.0" preserveRatio="true">
+                  <Image url="@../../icons/registrati.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#showsList" text="Spettacoli">
+            <graphic>
+               <ImageView fitWidth="120.0" preserveRatio="true">
+                  <Image url="@../../icons/spettacoli.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label onMouseClicked="#exit" text="Esci">
+            <graphic>
+               <ImageView fitWidth="100" preserveRatio="true">
+                  <Image url="@../../icons/chiudi.png" />
+                  <effect>
+                     <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                        <input>
+                           <Reflection />
+                        </input>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+            </graphic>
+         </Label>
+      </HBox>
    </center>
    <top>
-      <Label id="titolo" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" prefHeight="150.0" prefWidth="519.0" text="Benvenuto!" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets top="10.0" />
-         </BorderPane.margin>
-      </Label>
+      <Text id="titolo" text="Drive In &quot;Cinecar&quot;" BorderPane.alignment="CENTER" />
    </top>
 </BorderPane>
