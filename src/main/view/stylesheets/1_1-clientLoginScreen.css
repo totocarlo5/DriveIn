@@ -1,5 +1,8 @@
 .root {
       -fx-background-color:black;
+      -fx-fit-to-height: true;
+      -fx-fit-to-width: true;
+      -fx-pannable: true;
 }
 
 .border-pane {
@@ -8,30 +11,55 @@
       -fx-background-size: cover;  
 }
 
-#titolo {
-      -fx-font-size: 60px;
-      -fx-text-fill: white;
-      -fx-cursor: default;
+.v-box {
+      -fx-alignment: center;
+      -fx-fill-width: false;
 }
 
-#inserisciPassword {
-      -fx-font-size: 30px;
-      -fx-text-fill: #ef0303;
+.grid-pane {
+      -fx-alignment: center;
+      -fx-hgap: 600;
+}
+
+#titolo {
+      -fx-font-size: 60px;
+      -fx-cursor: default;
+      -fx-font-family: "Arial Black";
+      -fx-fill: #818181;
+      -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+      -fx-stroke: red;
+      -fx-stroke-width: 2px;
+      -fx-stroke-type: centered;
+      -fx-stroke-line-join: round;
 }
 
 .text-field {
       -fx-font-size: 30px;
       -fx-font-traversable: false;
+      -fx-font-family: "Arial Black";
 }
 
 .label {
     -fx-font-size: 30px;
     -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+    -fx-content-display: "TOP";
+    -fx-graphic-text-gap: 50;
+}
+
+.link {
     -fx-cursor: hand;
+}
+
+.link: hover {
+    -fx-background-color: grey;
+    -fx-background-radius: 20;
 }
 
 .exceptionLabel {
     -fx-text-fill: red;
+    -fx-pref-width: 800;
 }
 
 .glyph {
