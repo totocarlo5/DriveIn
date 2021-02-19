@@ -1,9 +1,11 @@
 package main.controller.primaryStageController;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import main.controller.Paths;
 import main.model.PasswordNotMatchException;
@@ -65,12 +67,23 @@ public class ScreenController1_1 extends PrimaryStageController {
     }
 
     @FXML
+    private void tabKey(KeyEvent event) {
+        if (userName.isFocused()) {
+            userName.setFocusTraversable(false);
+            password.setFocusTraversable(true);
+        }
+        else {
+            password.setFocusTraversable(false);
+            userName.setFocusTraversable(true);
+        }
+    }
+
+    @FXML
     private void back() { goToScreen(Paths.$1_MAIN_SCREEN); }
 
     @FXML
     private void initialize() {
         userName = (CustomTextField) TextFields.createClearableTextField();
-        userName.setFocusTraversable(false);
         userName.setPrefWidth(800);
         Glyph userGlyph = GlyphFontRegistry.font("FontAwesome").create("USER");
         userGlyph.getStyleClass().add("glyph");
@@ -78,7 +91,6 @@ public class ScreenController1_1 extends PrimaryStageController {
         vBox.getChildren().add(0, userName);
 
         password = (CustomPasswordField) TextFields.createClearablePasswordField();
-        password.setFocusTraversable(false);
         password.setPrefWidth(800);
         Glyph passwordGlyph = GlyphFontRegistry.font("FontAwesome").create("LOCK");
         passwordGlyph.getStyleClass().add("glyph");
