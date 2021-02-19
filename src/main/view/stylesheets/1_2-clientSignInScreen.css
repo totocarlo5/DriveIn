@@ -1,12 +1,8 @@
-.button {
-      -fx-background-radius: 30;
-      -fx-background-color: white;
-      -fx-font-size: 16px;
-      -fx-text-fill: #124cbf;
-      -fx-cursor: hand;
+.root {
+      -fx-background-color:black;
 }
 
-.root{
+.border-pane{
       -fx-background-image: url(/main/view/icons/background.png);
       -fx-background-position: center;
       -fx-background-size: cover;

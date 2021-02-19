@@ -16,46 +16,32 @@ import java.sql.SQLException;
 
 public class ScreenController1_2 extends PrimaryStageController {
 
-    @FXML
     private TextField firstName;
 
-    @FXML
     private Label errorFirstName;
 
-    @FXML
     private TextField lastName;
 
-    @FXML
     private Label errorLastName;
 
-    @FXML
     private DatePicker birthDate;
 
-    @FXML
     private TextField fiscalCode;
 
-    @FXML
     private Label errorFiscalCode;
 
-    @FXML
     private TextField phone;
 
-    @FXML
     private TextField username;
 
-    @FXML
     private Label errorUsername;
 
-    @FXML
     private PasswordField password;
 
-    @FXML
     private Label errorPassword;
 
-    @FXML
     private PasswordField password2;
 
-    @FXML
     private Label errorPassword2;
 
     @FXML

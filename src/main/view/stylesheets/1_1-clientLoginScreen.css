@@ -1,15 +1,11 @@
-.button {
-      -fx-background-radius: 30;
-      -fx-background-color: white;
-      -fx-font-size: 16px;
-      -fx-text-fill: #124cbf;
-      -fx-cursor: hand;
+.root {
+      -fx-background-color:black;
 }
 
-.root{
+.border-pane {
       -fx-background-image: url(/main/view/icons/background.png);
       -fx-background-position: center;
-      -fx-background-size: cover;
+      -fx-background-size: cover;  
 }
 
 #titolo {
@@ -17,13 +13,13 @@
       -fx-text-fill: white;
 }
 
-.text-field {
+#inserisciPassword {
       -fx-font-size: 30px;
+      -fx-text-fill: #ef0303;
 }
 
-#legenda {
-      -fx-font-size: 20px;
-      -fx-text-fill: white;
+.text-field {
+      -fx-font-size: 30px;
 }
 
 .label {
@@ -32,7 +28,12 @@
     -fx-cursor: hand;
 }
 
-.errorLabel {
-    -fx-font-size: 30px;
+.exceptionLabel {
     -fx-text-fill: red;
+}
+
+.glyph {
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 50px;
+    -fx-text-fill: black;
 }

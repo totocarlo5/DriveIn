@@ -11,6 +11,10 @@ import main.model.UserNotFoundException;
 import org.controlsfx.control.textfield.CustomPasswordField;
 import org.controlsfx.control.textfield.CustomTextField;
 import org.controlsfx.control.textfield.TextFields;
+import org.controlsfx.glyphfont.FontAwesome;
+import org.controlsfx.glyphfont.Glyph;
+import org.controlsfx.glyphfont.GlyphFont;
+import org.controlsfx.glyphfont.GlyphFontRegistry;
 
 import java.sql.SQLException;
 
@@ -20,16 +24,12 @@ public class ScreenController1_1 extends PrimaryStageController {
     @FXML
     private VBox vBox;
 
-    @FXML
     private CustomTextField userName;
 
-    @FXML
     private CustomPasswordField password;
 
-    @FXML
     private Label usernameError;
 
-    @FXML
     private Label passwordError;
 
     @FXML
@@ -67,7 +67,26 @@ public class ScreenController1_1 extends PrimaryStageController {
 
     @FXML
     private void initialize() {
-      //  userName = (CustomTextField) TextFields.createClearableTextField();
-      //  password = (CustomPasswordField) TextFields.createClearablePasswordField();
+        userName = (CustomTextField) TextFields.createClearableTextField();
+        userName.setFocusTraversable(false);
+        userName.setPrefWidth(800);
+        Glyph userGlyph = GlyphFontRegistry.font("FontAwesome").create("USER");
+        userGlyph.getStyleClass().add("glyph");
+        userName.setLeft(userGlyph);
+
+        password = (CustomPasswordField) TextFields.createClearablePasswordField();
+        password.setFocusTraversable(false);
+        password.setPrefWidth(800);
+        Glyph passwordGlyph = GlyphFontRegistry.font("FontAwesome").create("LOCK");
+        passwordGlyph.getStyleClass().add("glyph");
+        password.setLeft(passwordGlyph);
+
+        usernameError = new Label();
+        usernameError.getStyleClass().add("exceptionLabel");
+
+        passwordError = new Label();
+        passwordError.getStyleClass().add("exceptionLabel");
+
+        vBox.getChildren().addAll(userName, usernameError, password, passwordError);
     }
 }

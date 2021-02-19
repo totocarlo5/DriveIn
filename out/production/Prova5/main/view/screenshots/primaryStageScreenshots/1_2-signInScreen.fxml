@@ -1,163 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
-<BorderPane stylesheets="@../../stylesheets/C1_2-clientSignInScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_2">
-   <center>
-      <VBox>
-          <children>
-              <HBox>
-                  <children>
-                  <VBox>
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                     <children>
-                            <TextField fx:id="firstName" focusTraversable="false" promptText="Nome*" />
-                        <Label id="inserisciNome" fx:id="errorFirstName" focusTraversable="false" styleClass="errorLabel" />
-                     </children>
-                  </VBox>
-                  <VBox>
-                     <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </HBox.margin>
-                     <children>
-                            <TextField fx:id="lastName" focusTraversable="false" promptText="Cognome*" />
-                        <Label id="inserisciCognome" fx:id="errorLastName" focusTraversable="false" styleClass="errorLabel" />
-                     </children>
-                  </VBox>
-                  <VBox>
-                     <children>
-                        <DatePicker fx:id="birthDate" focusTraversable="false" prefWidth="330.0" promptText="data di nascita">
-                           <VBox.margin>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" stylesheets="@../../stylesheets/1_2-clientSignInScreen.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.primaryStageController.ScreenController1_2">
+   <content>
+      <BorderPane styleClass="border-pane">
+         <center>
+            <VBox alignment="CENTER" fillWidth="false" BorderPane.alignment="CENTER">
+                <children>
+                    <HBox>
+                        <children>
+                        <VBox>
+                           <HBox.margin>
                               <Insets right="10.0" />
-                           </VBox.margin>
-                        </DatePicker>
+                           </HBox.margin>
+                           <children>
+                                  <TextField fx:id="firstName" focusTraversable="false" promptText="Nome*" />
+                              <Label id="inserisciNome" fx:id="errorFirstName" focusTraversable="false" styleClass="errorLabel" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <children>
+                                  <TextField fx:id="lastName" focusTraversable="false" promptText="Cognome*" />
+                              <Label id="inserisciCognome" fx:id="errorLastName" focusTraversable="false" styleClass="errorLabel" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <DatePicker fx:id="birthDate" focusTraversable="false" prefWidth="330.0" promptText="data di nascita">
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <TextField fx:id="fiscalCode" focusTraversable="false" promptText="Codice fiscale*">
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label id="inserisciCF" fx:id="errorFiscalCode" focusTraversable="false" styleClass="errorLabel" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <TextField fx:id="phone" focusTraversable="false" promptText="numero di telefono" />
+                           </children>
+                        </VBox>
+                        </children>
+                    </HBox>
+                  <VBox>
+                     <children>
+                          <TextField fx:id="username" focusTraversable="false" promptText="username*" />
+                        <Label id="inserisciUser" fx:id="errorUsername" focusTraversable="false" styleClass="errorLabel" />
                      </children>
-                     <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </HBox.margin>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
                   </VBox>
                   <VBox>
                      <children>
-                        <TextField fx:id="fiscalCode" focusTraversable="false" promptText="Codice fiscale*">
+                          <PasswordField fx:id="password" focusTraversable="false" promptText="password*">
                            <VBox.margin>
-                              <Insets right="10.0" />
+                              <Insets />
                            </VBox.margin>
-                        </TextField>
-                        <Label id="inserisciCF" fx:id="errorFiscalCode" focusTraversable="false" styleClass="errorLabel" />
+                        </PasswordField>
+                        <Label id="inserisciPassword" fx:id="errorPassword" focusTraversable="false" styleClass="errorLabel" />
                      </children>
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
                   </VBox>
                   <VBox>
-                     <children>
-                        <TextField fx:id="phone" focusTraversable="false" promptText="numero di telefono" />
-                     </children>
-                  </VBox>
-                  </children>
-              </HBox>
-            <VBox>
-               <children>
-                    <TextField fx:id="username" focusTraversable="false" promptText="username*" />
-                  <Label id="inserisciUser" fx:id="errorUsername" focusTraversable="false" styleClass="errorLabel" />
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin>
-            </VBox>
-            <VBox>
-               <children>
-                    <PasswordField fx:id="password" focusTraversable="false" promptText="password*">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
-                  </PasswordField>
-                  <Label id="inserisciPassword" fx:id="errorPassword" focusTraversable="false" styleClass="errorLabel" />
-               </children>
+                     <children>
+                          <PasswordField fx:id="password2" focusTraversable="false" promptText="conferma password*" />
+                        <Label id="confermaPassword" fx:id="errorPassword2" focusTraversable="false" styleClass="errorLabel" />
+                     </children>
+                  </VBox>
+                </children>
+               <BorderPane.margin>
+                  <Insets bottom="100.0" />
+               </BorderPane.margin>
             </VBox>
-            <VBox>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
+         </center>
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="150.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" top="60.0" />
+               </BorderPane.margin>
                <children>
-                    <PasswordField fx:id="password2" focusTraversable="false" promptText="conferma password*" />
-                  <Label id="confermaPassword" fx:id="errorPassword2" focusTraversable="false" styleClass="errorLabel" />
+                  <Label id="titolo" fx:id="titolo" focusTraversable="false" text="Inserisci i dati richiesti" />
+                  <Label id="legenda" focusTraversable="false" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
                </children>
             </VBox>
-          </children>
-         <BorderPane.margin>
-            <Insets bottom="100.0" />
-         </BorderPane.margin>
-      </VBox>
-   </center>
-   <top>
-      <VBox alignment="TOP_CENTER" prefHeight="150.0" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets left="20.0" top="60.0" />
-         </BorderPane.margin>
-         <children>
-            <Label id="titolo" fx:id="titolo" focusTraversable="false" text="Inserisci i dati richiesti" />
-            <Label id="legenda" focusTraversable="false" text="* I campi contrassegnati con l'asterisco sono obbligatori" />
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <GridPane BorderPane.alignment="CENTER">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" />
-            <ColumnConstraints hgrow="SOMETIMES" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints vgrow="SOMETIMES" />
-         </rowConstraints>
-         <children>
-            <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-               <graphic>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/indietro.png" />
-                     </image>
-                      <effect>
-                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                              <input>
-                                  <Reflection />
-                              </input>
-                          </DropShadow>
-                      </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label fx:id="signInC1_2" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#signIn" text="Conferma" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-               <graphic>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../icons/ok.png" />
-                     </image>
-                      <effect>
-                          <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
-                              <input>
-                                  <Reflection />
-                              </input>
-                          </DropShadow>
-                      </effect>
-                  </ImageView>
-               </graphic>
-            </Label>
-         </children>
-      </GridPane>
-   </bottom>
-   <left>
-      <Pane prefWidth="50.0" BorderPane.alignment="CENTER" />
-   </left>
-   <right>
-      <Pane prefWidth="50.0" BorderPane.alignment="CENTER" />
-   </right>
-</BorderPane>
+         </top>
+         <bottom>
+            <GridPane BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#back" text="Indietro" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/indietro.png" />
+                           </image>
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                                    <input>
+                                        <Reflection />
+                                    </input>
+                                </DropShadow>
+                            </effect>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="signInC1_2" contentDisplay="TOP" graphicTextGap="50.0" onMouseClicked="#signIn" text="Conferma" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/ok.png" />
+                           </image>
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" color="#00b0fffc" height="100.0" radius="49.5" spread="0.5" width="100.0">
+                                    <input>
+                                        <Reflection />
+                                    </input>
+                                </DropShadow>
+                            </effect>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>
